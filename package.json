@@ -1,0 +1,45 @@
+{
+  "name": "react-easy-datepicker",
+  "version": "1.0.0",
+  "description": "A barebones, no-frills datepicker from React",
+  "scripts": {
+    "lint": "eslint src",
+    "start": "node server.js",
+    "prepublish": "./node_modules/.bin/babel -d lib src/"
+  },
+  "repository": {
+    "url": "https://github.com/chrisborrowdale/react-easy-datepicker",
+    "type": "git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Chris Borrowdale",
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "6.10.4",
+    "babel-loader": "6.0.1",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "6.5.0",
+    "enzyme": "^2.6.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.8.0",
+    "jest": "^17.0.3",
+    "react-addons-test-utils": "^15.4.1",
+    "react-test-renderer": "^15.4.1",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "date-fns": "^1.13.0",
+    "react": "15.4.1",
+    "react-dom": "15.4.1"
+  },
+  "main": "lib/Datepicker.js"
+}

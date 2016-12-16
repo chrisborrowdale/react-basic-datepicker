@@ -1,0 +1,128 @@
+/* DEMO PAGE STYLES */
+* { margin: 0; padding: 0; font-family: 'Helvetica Neue'}
+
+html {
+  background: #eaeaea;
+}
+
+body {
+  max-width: 630px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 52px;
+line-height: 1.5;
+margin-top: 40px;
+display: block;
+color: #444444;
+letter-spacing: -1px;
+}
+
+p {
+  font-size: 24px;
+  display: block;
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #464646;
+  opacity: 0.7;
+  letter-spacing: 0px;
+}
+
+/* DATEPICKER STYLES */
+
+.react-datepicker {
+  max-width: 320px;
+  background: whitesmoke;
+  margin: 10px auto;
+  box-shadow: 0 1px 1px #dedede;
+  border-radius: 5px;
+  position: relative;
+  user-select: none;
+}
+
+.react-datepicker-controls {
+  overflow: hidden;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+.react-datepicker-previous,
+.react-datepicker-next {
+  float: left;
+  background: #333;
+  border: none;
+  padding: 10px 15px;
+  font-size: 17px;
+  color: #fff;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.react-datepicker-next {
+  float: right;
+}
+
+.react-datepicker-month {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.react-datepicker-dates {
+  overflow: hidden;
+}
+
+.react-datepicker-date {
+  transition: background .2s ease;
+  float: left;
+  width: 14.285714286%;
+  text-align: center;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid whitesmoke;
+  box-sizing: border-box;
+  padding: 11px;
+  cursor: pointer;
+  outline: none;
+}
+
+.react-datepicker-date:hover {
+  background: #f5f5f5;
+}
+
+.react-datepicker-date-disabled {
+  color: #ccc;
+  cursor: auto;
+}
+
+.react-datepicker-date-disabled:hover {
+  background: #fff;
+}
+
+.react-datepicker-date-active {
+  background: #6f6f6f;
+  color: #fff;
+}
+
+.react-datepicker-date-active:hover {
+  background: #6f6f6f;
+  color: #fff;
+}
+
+.react-simple-datepicker-input {
+  margin-top: 40px;
+  padding: 20px 120px 20px 20px;
+  font-size: 22px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #6f6c6d;
+  cursor: pointer;
+}
