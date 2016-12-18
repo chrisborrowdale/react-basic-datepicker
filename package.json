@@ -12,7 +12,7 @@
     "type": "git"
   },
   "keywords": [
-    "react"
+    "react", "datepicker", "basic datepicker"
   ],
   "author": "Chris Borrowdale",
   "license": "MIT",
