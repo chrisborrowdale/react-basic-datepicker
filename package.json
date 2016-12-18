@@ -1,5 +1,5 @@
 {
-  "name": "react-easy-datepicker",
+  "name": "react-basic-datepicker",
   "version": "1.0.0",
   "description": "A barebones, no-frills datepicker from React",
   "scripts": {
@@ -8,7 +8,7 @@
     "prepublish": "./node_modules/.bin/babel -d lib src/"
   },
   "repository": {
-    "url": "https://github.com/chrisborrowdale/react-easy-datepicker",
+    "url": "https://github.com/chrisborrowdale/react-basic-datepicker",
     "type": "git"
   },
   "keywords": [

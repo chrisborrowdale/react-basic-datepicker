@@ -1,4 +1,4 @@
-# React Easy Datepicker
+# React Basic Datepicker
 
 A barebones, no-frills React datepicker.  This was built to scratch my own itch and is very basic, if you want something with a few more features then check out [React Datepicker](https://github.com/Hacker0x01/react-datepicker).
 
