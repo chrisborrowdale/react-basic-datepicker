@@ -1,3 +1,7 @@
+[![npm version](https://badge.fury.io/js/react-basic-datepicker.svg)](https://badge.fury.io/js/react-basic-datepicker)
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/chrisborrowdale/react-basic-datepicker)
+
+
 # React Basic Datepicker
 
 A barebones, no-frills React datepicker.  This was built to scratch my own itch and is very basic, if you want something with a few more features then check out [React Datepicker](https://github.com/Hacker0x01/react-datepicker).
