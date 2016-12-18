@@ -5,3 +5,4 @@
 npm-debug.log
 coverage
 .eslintcache
+/demo/node_modules
