@@ -7,7 +7,7 @@ export default class Datepicker extends Component {
   constructor(props) {
     super(props);
     this.handleCalendarVisibility = this.handleCalendarVisibility.bind(this);
-    this.handleDateChange = this.handleDateChange.bind(this);
+    this.dateChange = this.dateChange.bind(this);
 
     this.state = {
       showCalendar: false,
@@ -31,7 +31,8 @@ export default class Datepicker extends Component {
     }
   }
 
-  handleDateChange(selectedDate) {
+  dateChange(selectedDate) {
+    this.props.handleDateChange()
     this.setState({
       selectedDate,
       showCalendar: false,
@@ -60,15 +61,14 @@ export default class Datepicker extends Component {
           <Calendar
             ref={calendar => (this.calendar = calendar)}
             startDate={this.state.selectedDate}
-            handleDateChange={this.handleDateChange}
-            {...this.props}
+            dateChange={this.dateChange}
+            dateChange={this.dateChange}
           />
         }
       </div>
     );
   }
 }
-
 
 Datepicker.propTypes = {
   dateFormat: React.PropTypes.string,
@@ -77,7 +77,6 @@ Datepicker.propTypes = {
   datepickerId: React.PropTypes.string,
   datepickerClassName: React.PropTypes.string,
 };
-
 
 Datepicker.defaultProps = {
   dateFormat: 'DD-MM-YYYY',

@@ -32,7 +32,7 @@ export default class Calendar extends Component {
         selectedDate: new Date(format(evt.target.dataset.date, 'MM-DD-YYYY')),
       });
 
-      this.props.handleDateChange(new Date(format(evt.target.dataset.date, 'MM-DD-YYYY')));
+      this.props.dateChange(new Date(format(evt.target.dataset.date, 'MM-DD-YYYY')));
     }
   }
 
@@ -105,5 +105,5 @@ Calendar.propTypes = {
   minDate: React.PropTypes.instanceOf(Date).isRequired,
   prevButtonLabel: React.PropTypes.string,
   nextButtonLabel: React.PropTypes.string,
-  handleDateChange: React.PropTypes.func,
+  dateChange: React.PropTypes.func,
 };

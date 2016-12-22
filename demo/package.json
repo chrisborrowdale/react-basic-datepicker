@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react-basic-datepicker": "^1.0.1"
+    "react-basic-datepicker": "^1.0.2"
   }
 }
