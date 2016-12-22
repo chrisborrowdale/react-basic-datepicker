@@ -53,6 +53,7 @@ export default class Calendar extends Component {
 
       daysOfMonth.push(
         <button
+          type="button"
           key={dateIndex}
           className={`react-datepicker-date ${date ? 'react-datepicker-date-active' : ''} ${isDisabled ? 'react-datepicker-date-disabled' : ''}`}
           onClick={this.handleDateSelected}
