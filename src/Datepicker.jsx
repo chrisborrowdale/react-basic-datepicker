@@ -32,7 +32,7 @@ export default class Datepicker extends Component {
   }
 
   dateChange(selectedDate) {
-    this.props.handleDateChange()
+    this.props.handleDateChange(selectedDate)
     this.setState({
       selectedDate,
       showCalendar: false,

@@ -1,6 +1,6 @@
 {
   "name": "react-basic-datepicker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A barebones, no-frills datepicker from React",
   "scripts": {
     "lint": "eslint src",
