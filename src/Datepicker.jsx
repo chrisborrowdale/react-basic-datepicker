@@ -26,7 +26,7 @@ export default class Datepicker extends Component {
   handleClickOutside(e) {
     const calendar = ReactDOM.findDOMNode(this.calendar);
 
-    if (e.target.contains(calendar)) {
+    if (e.target && e.target.contains(calendar)) {
       this.setState({ showCalendar: false });
     }
   }
