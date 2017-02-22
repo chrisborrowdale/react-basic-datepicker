@@ -60,7 +60,7 @@ test('Selecting a date updates state if current or future date', () => {
     }
   }
 
-  const calendar = mount(<Calendar handleDateChange={jest.fn()} />)
+  const calendar = mount(<Calendar dateChange={jest.fn()} />)
 
   calendar.instance().handleDateSelected(node)
   expect(calendar.state().selectedDate).toEqual(new Date(2019, 11))
@@ -76,7 +76,7 @@ test('Selecting a date does not update state if < minDate', () => {
   }
 
   const date = new Date()
-  const calendar = mount(<Calendar startDate={date} handleDateChange={jest.fn()} />)
+  const calendar = mount(<Calendar startDate={date} dateChange={jest.fn()} />)
 
   calendar.instance().handleDateSelected(node)
   expect(calendar.state().selectedDate).toEqual(date)

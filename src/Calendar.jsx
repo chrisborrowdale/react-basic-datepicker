@@ -26,7 +26,7 @@ export default class Calendar extends Component {
 
   handleDateSelected(evt) {
     const dateBefore = !isBefore(evt.target.dataset.date, new Date(format(this.props.minDate, 'MM-DD-YYYY')));
-
+    
     if (dateBefore) {
       this.setState({
         selectedDate: new Date(format(evt.target.dataset.date, 'MM-DD-YYYY')),

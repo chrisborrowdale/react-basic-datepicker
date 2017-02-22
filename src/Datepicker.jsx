@@ -6,6 +6,7 @@ import Calendar from './Calendar';
 export default class Datepicker extends Component {
   constructor(props) {
     super(props);
+    this.onOutsideClick = this.onOutsideClick.bind(this);
     this.handleCalendarVisibility = this.handleCalendarVisibility.bind(this);
     this.dateChange = this.dateChange.bind(this);
 
@@ -15,24 +16,22 @@ export default class Datepicker extends Component {
     };
   }
 
-  componentDidMount() {
-    document.addEventListener('click', this.handleClickOutside.bind(this), false);
+  componentWillMount() {
+    document.addEventListener('click', this.onOutsideClick, false);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.handleClickOutside.bind(this), false);
+    document.removeEventListener('click', this.onOutsideClick, false);
   }
 
-  handleClickOutside(e) {
-    const calendar = ReactDOM.findDOMNode(this.calendar);
-
-    if (e.target && e.target.contains(calendar)) {
+  onOutsideClick(event) {
+    if (!this.mainNode.contains(event.target) && this.state.showCalendar) {
       this.setState({ showCalendar: false });
     }
   }
 
   dateChange(selectedDate) {
-    this.props.handleDateChange(selectedDate)
+    if (this.props.handleDateChange) this.props.handleDateChange(selectedDate)
     this.setState({
       selectedDate,
       showCalendar: false,
@@ -47,7 +46,7 @@ export default class Datepicker extends Component {
 
   render() {
     return (
-      <div>
+      <div ref={(node) => { this.mainNode = node; }} style={{display: 'inline-block'}}>
         <input
           name={this.props.datepickerName}
           className={this.props.datepickerClassName}
@@ -59,9 +58,7 @@ export default class Datepicker extends Component {
 
         { this.state.showCalendar &&
           <Calendar
-            ref={calendar => (this.calendar = calendar)}
             startDate={this.state.selectedDate}
-            dateChange={this.dateChange}
             dateChange={this.dateChange}
           />
         }

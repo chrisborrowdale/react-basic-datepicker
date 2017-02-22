@@ -16,7 +16,7 @@ test('calendar should be hidden by default', () => {
 });
 
 test('selecing a date updates date state and hides component', () => {
-  datepicker.instance().handleDateChange('Thu Dec 01 2019 00:00:00 GMT+0000 (GMT)')
+  datepicker.instance().dateChange('Thu Dec 01 2019 00:00:00 GMT+0000 (GMT)')
   expect(datepicker.state().selectedDate).toEqual('Thu Dec 01 2019 00:00:00 GMT+0000 (GMT)')
   expect(datepicker.state().showCalendar).toBeFalsy()
 });
