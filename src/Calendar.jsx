@@ -25,14 +25,14 @@ export default class Calendar extends Component {
   }
 
   handleDateSelected(evt) {
-    const dateBefore = !isBefore(evt.target.dataset.date, new Date(format(this.props.minDate, 'MM-DD-YYYY')));
-    
+    const dateBefore = !isBefore(evt.target.dataset.date, new Date(format(this.props.minDate, 'MM/DD/YYYY')));
+
     if (dateBefore) {
       this.setState({
-        selectedDate: new Date(format(evt.target.dataset.date, 'MM-DD-YYYY')),
+        selectedDate: new Date(format(evt.target.dataset.date, 'MM/DD/YYYY')),
       });
 
-      this.props.dateChange(new Date(format(evt.target.dataset.date, 'MM-DD-YYYY')));
+      this.props.dateChange(new Date(format(evt.target.dataset.date, 'MM/DD/YYYY')));
     }
   }
 
@@ -42,13 +42,13 @@ export default class Calendar extends Component {
 
     for (let dateIndex = 1; dateIndex < daysInMonth; dateIndex += 1) {
       const isDisabled = isBefore(
-        new Date(format(this.state.date, `MM-${dateIndex}-YYYY`)),
-        new Date(format(this.props.minDate, 'MM-DD-YYYY'))
+        new Date(format(this.state.date, `MM/${dateIndex}/YYYY`)),
+        new Date(format(this.props.minDate, 'MM/DD/YYYY'))
       );
 
       const date = isEqual(
-        new Date(format(this.state.selectedDate, `MM-${dateIndex}-YYYY`)),
-        new Date(format(this.state.date, 'MM-DD-YYYY'))
+        new Date(format(this.state.selectedDate, `MM/${dateIndex}/YYYY`)),
+        new Date(format(this.state.date, 'MM/DD/YYYY'))
       );
 
       daysOfMonth.push(
@@ -57,7 +57,7 @@ export default class Calendar extends Component {
           key={dateIndex}
           className={`react-datepicker-date ${date ? 'react-datepicker-date-active' : ''} ${isDisabled ? 'react-datepicker-date-disabled' : ''}`}
           onClick={this.handleDateSelected}
-          data-date={new Date(format(this.state.date, `MM-${dateIndex}-YYYY`))}
+          data-date={new Date(format(this.state.date, `MM/${dateIndex}/YYYY`))}
         >
           {dateIndex}
         </button>
