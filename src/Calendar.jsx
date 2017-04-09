@@ -98,12 +98,3 @@ Calendar.defaultProps = {
   prevButtonLabel: String.fromCharCode(8592),
   nextButtonLabel: String.fromCharCode(8594),
 };
-
-Calendar.propTypes = {
-  dateFormat: React.PropTypes.string.isRequired,
-  startDate: React.PropTypes.instanceOf(Date).isRequired,
-  minDate: React.PropTypes.instanceOf(Date).isRequired,
-  prevButtonLabel: React.PropTypes.string,
-  nextButtonLabel: React.PropTypes.string,
-  dateChange: React.PropTypes.func,
-};

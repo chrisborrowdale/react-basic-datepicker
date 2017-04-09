@@ -5,14 +5,14 @@
   "scripts": {
     "lint": "eslint src",
     "start": "node server.js",
-    "prepublish": "./node_modules/.bin/babel -d lib src/"
+    "prepublish": "./node_modules/.bin/babel -d lib src/",
+    "test": "./node_modules/.bin/jest"
   },
-  "repository": {
-    "url": "https://github.com/chrisborrowdale/react-basic-datepicker",
-    "type": "git"
-  },
+  "repository": "https://github.com/chrisborrowdale/react-basic-datepicker",
   "keywords": [
-    "react", "datepicker", "basic datepicker"
+    "react",
+    "datepicker",
+    "basic datepicker"
   ],
   "author": "Chris Borrowdale",
   "license": "MIT",
@@ -30,16 +30,16 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
-    "jest": "^17.0.3",
-    "react-addons-test-utils": "^15.4.1",
-    "react-test-renderer": "^15.4.1",
+    "jest": "^19.0.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-test-renderer": "^15.5.4",
     "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
     "date-fns": "^1.13.0",
-    "react": "15.4.1",
-    "react-dom": "15.4.1"
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3"
   },
   "main": "lib/Datepicker.js"
 }

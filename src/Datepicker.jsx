@@ -67,14 +67,6 @@ export default class Datepicker extends Component {
   }
 }
 
-Datepicker.propTypes = {
-  dateFormat: React.PropTypes.string,
-  startDate: React.PropTypes.instanceOf(Date).isRequired,
-  datepickerName: React.PropTypes.string,
-  datepickerId: React.PropTypes.string,
-  datepickerClassName: React.PropTypes.string,
-};
-
 Datepicker.defaultProps = {
   dateFormat: 'DD-MM-YYYY',
   startDate: new Date(),
