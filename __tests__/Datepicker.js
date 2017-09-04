@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Datepicker from '../src/Datepicker'
 import Calendar from '../src/Calendar'
 import { mount } from 'enzyme';

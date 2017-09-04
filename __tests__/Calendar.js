@@ -1,5 +1,4 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Calendar from '../src/Calendar'
 import { mount } from 'enzyme';
 import { format, getDaysInMonth } from 'date-fns'
