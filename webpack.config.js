@@ -2,27 +2,32 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:4000',
-    './demo/js/app.jsx'
-  ],
+  entry: {
+    app: './src/app.js'
+  },
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/demo/js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  devServer: {
+    contentBase: './demo'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        key: 'jsx',
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
-        loader: 'babel-loader'
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
       }
     ]
   },
   plugins: [],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    modules: [
+      path.join(__dirname, 'src'),
+      'node_modules'
+    ]
   },
 }

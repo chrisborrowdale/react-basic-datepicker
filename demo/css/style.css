@@ -1,33 +1,54 @@
 /* DEMO PAGE STYLES */
-* { margin: 0; padding: 0; font-family: 'Helvetica Neue'}
+* { margin: 0; padding: 0; font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif }
 
 html {
-  background: #eaeaea;
+  background: #f1f1f1;
 }
 
 body {
-  max-width: 630px;
-  margin: 40px auto;
+  max-width: 620px;
+  margin: 80px auto;
   text-align: center;
 }
 
 h1 {
-  font-size: 52px;
-line-height: 1.5;
-margin-top: 40px;
-display: block;
-color: #444444;
-letter-spacing: -1px;
+  font-size: 3.5em;
+  line-height: 1.5;
+  margin-top: 40px;
+  display: block;
+  color: #444444;
+  font-weight: 500;
 }
 
 p {
-  font-size: 24px;
+  font-size: 21px;
   display: block;
   margin-top: 10px;
   line-height: 1.5;
   color: #464646;
   opacity: 0.7;
   letter-spacing: 0px;
+}
+
+small {
+  font-size: 14px;
+  margin: 20px 0 10px;
+  display: block;
+}
+
+.info {
+  position: absolute;
+  bottom: 230px;
+  left: 0;
+  right: 0;
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid #19a974;
+  color: #19a974;
+  font-weight: 500;
 }
 
 /* DATEPICKER STYLES */
@@ -45,14 +66,14 @@ p {
 .react-datepicker-controls {
   overflow: hidden;
   text-align: center;
-  background: #333;
+  background: #464646;
   color: #fff;
 }
 
 .react-datepicker-previous,
 .react-datepicker-next {
   float: left;
-  background: #333;
+  background: #464646;
   border: none;
   padding: 10px 15px;
   font-size: 17px;
@@ -73,7 +94,6 @@ p {
   left: 0;
   right: 0;
   font-size: 14px;
-  font-weight: bold;
 }
 
 .react-datepicker-dates {
