@@ -62,7 +62,10 @@ export default class Datepicker extends Component {
 
 Datepicker.propTypes = {
   dateFormat: PropTypes.string,
-  startDate: PropTypes.string,
+  startDate: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+  ]),
   datepickerName: PropTypes.string,
   datepickerId: PropTypes.string,
   datepickerClassName: PropTypes.string,
