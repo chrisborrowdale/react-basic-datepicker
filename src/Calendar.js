@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import format from 'date-fns/format'
 import getDaysInMonth from 'date-fns/get_days_in_month'
 import addMonths from 'date-fns/add_months'
@@ -84,6 +85,14 @@ export default class Calendar extends Component {
       </div>
     )
   }
+}
+
+Calendar.propTypes = {
+  dateFormat: PropTypes.string,
+  startDate: PropTypes.date,
+  minDate: PropTypes.date,
+  prevButtonLabel: PropTypes.string,
+  nextButtonLabel: PropTypes.string,
 }
 
 Calendar.defaultProps = {

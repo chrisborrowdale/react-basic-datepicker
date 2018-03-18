@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import format from 'date-fns/format'
 import Calendar from './Calendar'
@@ -58,6 +59,20 @@ export default class Datepicker extends Component {
     )
   }
 }
+
+Datepicker.propTypes = {
+  enabled: PropTypes.bool,
+  hasDeadline: PropTypes.bool,
+  toggle: PropTypes.func.isRequired,
+  dateFormat: PropTypes.string,
+  startDate: PropTypes.oneOfType([
+    PropTypes.PropTypes.instanceOf(Date),
+    PropTypes.string,
+  ]),
+  datepickerName: PropTypes.string,
+  datepickerId: PropTypes.string,
+  datepickerClassName: PropTypes.string,
+};
 
 Datepicker.defaultProps = {
   dateFormat: 'DD-MM-YYYY',

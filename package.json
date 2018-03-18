@@ -38,7 +38,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "date-fns": "^1.13.0"
+    "date-fns": "^1.13.0",
+    "prop-types": "^15.6.1"
   },
   "peerDependencies": {
     "react": "^15.5.3",
