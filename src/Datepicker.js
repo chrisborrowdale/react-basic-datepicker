@@ -61,9 +61,12 @@ export default class Datepicker extends Component {
 }
 
 Datepicker.propTypes = {
+  enabled: PropTypes.bool,
+  hasDeadline: PropTypes.bool,
+  toggle: PropTypes.func.isRequired,
   dateFormat: PropTypes.string,
   startDate: PropTypes.oneOfType([
-    PropTypes.object,
+    PropTypes.PropTypes.instanceOf(Date),
     PropTypes.string,
   ]),
   datepickerName: PropTypes.string,
