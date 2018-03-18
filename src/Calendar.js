@@ -89,8 +89,8 @@ export default class Calendar extends Component {
 
 Calendar.propTypes = {
   dateFormat: PropTypes.string,
-  startDate: PropTypes.string,
-  minDate: PropTypes.string,
+  startDate: PropTypes.date,
+  minDate: PropTypes.date,
   prevButtonLabel: PropTypes.string,
   nextButtonLabel: PropTypes.string,
 }
