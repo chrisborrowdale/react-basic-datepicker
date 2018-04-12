@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom'
 import format from 'date-fns/format'
 import Calendar from './Calendar'
 
+function noop() {
+  return null
+}
+
+function hasOpenHandler(props) {
+  return props.externalOpenHandler && props.externalOpenHandler.subscribe && typeof props.externalOpenHandler.subscribe === 'function'
+}
+
 export default class Datepicker extends Component {
   constructor(props) {
     super(props)
@@ -12,12 +20,19 @@ export default class Datepicker extends Component {
 
     this.state = {
       showCalendar: false,
-      selectedDate: this.props.startDate
+      selectedDate: this.props.startDate,
+      usingExternalOpenHandler: hasOpenHandler(this.props)
     }
   }
 
   componentWillMount() {
+    var _this = this
     document.addEventListener('click', this.onOutsideClick, false)
+    if (hasOpenHandler(_this.props)) {
+      _this.props.externalOpenHandler.subscribe(function(next) {
+        _this.handleCalendarVisibility()
+      })
+    }
   }
 
   componentWillUnmount() {
@@ -45,13 +60,14 @@ export default class Datepicker extends Component {
   }
 
   render() {
+    var open = this.state.usingExternalOpenHandler ? noop : this.handleCalendarVisibility
     return (
       <div
         ref={node => {
           this.mainNode = node
         }}
       >
-        <input name={this.props.datepickerName} className={this.props.datepickerClassName} id={this.props.datepickerId} onFocus={this.handleCalendarVisibility} value={format(this.state.selectedDate, this.props.dateFormat)} readOnly />
+        <input name={this.props.datepickerName} className={this.props.datepickerClassName} id={this.props.datepickerId} onFocus={open} value={format(this.state.selectedDate, this.props.dateFormat)} readOnly />
 
         {this.state.showCalendar && <Calendar startDate={this.state.selectedDate} dateChange={this.dateChange} minDate={this.props.minDate} />}
       </div>
